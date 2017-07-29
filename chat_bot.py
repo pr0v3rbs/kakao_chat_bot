@@ -24,7 +24,13 @@ def Message():
     if content.startswith('gfldt'):
         dataSend = {
             "message": {
-                "text": gfl.getDollTime(content.split(' ')[1:]).strip()
+                "text": gfl.getDollTime(content.split(' ')[1:])
+            }
+        }
+    elif content.startswith('gflet'):
+        dataSend = {
+            "message": {
+                "text": gfl.getEquipTime(content.split(' ')[1:])
             }
         }
     else:
